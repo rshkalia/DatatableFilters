@@ -124,6 +124,7 @@ export default class memberSearch extends NavigationMixin(LightningElement) {
         this.value='';
         this.countrykey = '';
         this.allValues = [];
+
     }
 
     handleApplyFilters(){
@@ -143,7 +144,7 @@ export default class memberSearch extends NavigationMixin(LightningElement) {
                 var isNameFound = false;
                 var isCountryFound = false;
 
-              if(record.Name != undefined && this.nameKey != undefined){
+              if(record.Name != undefined && this.nameKey != undefined && this.nameKey != ''){
 
                     let nameKey = this.nameKey.toLowerCase();
                     
@@ -154,7 +155,7 @@ export default class memberSearch extends NavigationMixin(LightningElement) {
                     }
                 }
 
-                if(record.BillingCountry != undefined && this.countrykey != undefined){
+                if(record.BillingCountry != undefined && this.countrykey != undefined && this.countrykey != ''){
 
                     let strCountryKey = this.countrykey.toLowerCase();
                     
